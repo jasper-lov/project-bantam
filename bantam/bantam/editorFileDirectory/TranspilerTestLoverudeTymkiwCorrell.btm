@@ -1,0 +1,75 @@
+Class Foo{
+
+   int f = 10;
+   void action(){}
+}
+
+Class Bar extends Foo{
+
+}
+
+Class Main extends Foo{
+
+    
+    int x = 0;
+    int y = 1;
+    Foo foo = this;
+
+
+    /* Constructors don't work in our implementation.
+    This was left in to demonstrate that.
+    Main init(String name){
+        this.name = name;
+    }     */
+
+    int returnNumber(int x, int y){
+        while(x == 0){
+            x = 1;
+            break;
+        }
+        if(x < 10){
+          x = this.x;
+	  y = super.f;
+        }
+        return x + y;
+
+    }
+
+
+    String returnString(){
+        var s = "Hello";
+
+	/* Casting will translate properly, however if 
+	used in a declStmt,  fails syntactic analysis
+	cast(Main, foo); */
+
+	var num = returnNumber(2, 3);
+        if(s instanceof String){
+		s = "Greetings.";	
+	}
+        return s;
+    }
+
+
+    void main(){
+
+	
+        var i = 0;
+	for(i = 0; i < 2; i++){
+	    var j = 0;
+	    print("");
+	    print("Going to sleep");
+            for(j = 0; j < 5; j++){
+                print("Zzz...");
+            }
+	    print("Waking up!");
+	    var k = 0;
+	    while(k < 5){
+	        print("Going to class");
+	        k++;
+	    }
+	}
+	
+    }
+}
+

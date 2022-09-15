@@ -1,0 +1,48 @@
+/*
+    File: java-keywords.css
+    Names: Jasper Loverude, Dylan Tymkiw, Cassidy Correll
+    Class: CS 361
+    Project 6
+    Date: March 18
+*/
+
+/* Set style for keywords highlight, given in RichTextFX */
+
+.keyword {
+    -fx-fill: purple;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-font-weight: bold;
+}
+
+/* parentheses, brackets, braces are all colored the same teal color */
+.paren {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+
+.string {
+    -fx-fill: blue;
+}
+
+.comment {
+	-fx-fill: cadetblue;
+}
+
+.paragraph-box:has-caret {
+    -fx-background-color: #f2f9fc;
+}
+
+/* integer constants are colored in firebrick */
+.integer {
+    -fx-fill: firebrick;
+}

@@ -1,0 +1,62 @@
+/*
+ * File: CheckerTestLoverudeTymkiwCorrel.btm
+ * Authors: Cassidy Correl, Jasper Loverude, Dylan Tymkiw
+ * Date: 4/2022
+ */
+
+Class forTesting{
+    int toInherit = 10;
+
+    void returnsVoid(){}
+
+}
+
+Class main extends forTesting{
+
+    int o;
+
+    void flower(){
+    //break statement outside of loop
+    break;
+    }
+
+    int test(int x){
+
+        return x;
+
+    }
+
+    void main(){
+
+        //Error: flower is void method
+        var dog = flower();
+
+        //Error: var is already declared
+        var dog = 5;
+
+        //Error: Assign expression must match declared type
+        dog = 5;
+
+        //predicate statement is not boolean
+        for(;5;){}
+
+        //wrong number of parameters
+        flower(4);
+
+        //cast to invalid type
+        cast(house, dog);
+
+        //Wrong type of parameter
+        var y = test("1");
+
+        //Invalid type, o is already an int
+        o = "hello";
+
+        // Checks inheritance type matching
+        var doesThisWork = "not an Int";
+        doesThisWork = super.toInherit;
+        var what = super.returnsVoid();
+
+    }
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    File: Main.fxml
+    Names: Jasper Loverude, Cassidy Correl, Dylan Tymkiw
+    Class: CS 361
+    Project 6
+    Date: March 18
+-->
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TreeView?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="proj10LoverudeTymkiwCorrell.FolderDrawerController"
+      maxWidth="-Infinity">
+    <children>
+        <TreeView fx:id="tree" prefWidth="200" prefHeight="800"/>
+    </children>
+</VBox>

@@ -1,0 +1,39 @@
+/*
+    File: Main.css
+    Names: Jasper Loverude, Dylan Tymkiw, Cassidy Correll
+    Class: CS 361
+    Project 6
+    Date: March 18
+*/
+
+
+/* Set color for each of the three buttons */
+#transpileButton {
+    -fx-background-color: lightblue;
+}
+
+#transpileRunButton {
+    -fx-background-color: palegreen;
+}
+
+#stopButton {
+    -fx-background-color: lightcoral;
+}
+
+#checkButton {
+    -fx-background-color: #ffdfbf;
+}
+
+
+/* Set general styling of the button class */
+.button {
+    -fx-border-color: Black;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+
+/* Make font size to 10 */
+.root {
+    -fx-font-size: 10pt;
+}

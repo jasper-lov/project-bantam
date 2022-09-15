@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    File: Main.fxml
+    Names: Jasper Loverude, Cassidy Correl, Dylan Tymkiw
+    Class: CS 361
+    Project 6
+    Date: March 18
+-->
+<!-- set primary scene of size 800*600 -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextField?>
+<BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="proj10LoverudeTymkiwCorrell.Controller">
+    <center>
+<VBox>
+    <!-- make menu bar expand to fill the window if user resizes window  -->
+    <MenuBar >
+        <!-- File menu with 7 menu items  -->
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem accelerator="Shortcut+I" mnemonicParsing="false"
+                      onAction="#handleAbout" text="About..."/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+
+            <MenuItem text="New" accelerator="Shortcut+N" mnemonicParsing="false"
+                      onAction="#handleNew"/>
+            <MenuItem text="Open..." accelerator="Shortcut+O" mnemonicParsing="false"
+                      onAction="#handleOpen"/>
+            <MenuItem text="Close" fx:id="closeMI" accelerator="Shortcut+W"
+                      mnemonicParsing="false" onAction="#handleClose"/>
+            <MenuItem text="Save" fx:id="saveMI" accelerator="Shortcut+S"
+                      mnemonicParsing="false" onAction="#handleSave"/>
+            <MenuItem text="Save as..." fx:id="saveAsMI" accelerator="Shortcut+Shift+S"
+                      mnemonicParsing="false" onAction="#handleSaveAs"/>
+
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem text="Exit" accelerator="Shortcut+Q" mnemonicParsing="false"
+                      onAction="#handleExit"/>
+        </Menu>
+        <!-- Edit menu also has 6 items  -->
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem text="Undo" fx:id="undoMI" accelerator="Shortcut+Z"
+                      mnemonicParsing="false" onAction="#handleUndo"/>
+            <MenuItem text="Redo" fx:id="redoMI" accelerator="Shortcut+Shift+Z"
+                      mnemonicParsing="false" onAction="#handleRedo"/>
+            <MenuItem text="Cut" fx:id="cutMI" accelerator="Shortcut+X"
+                      mnemonicParsing="false" onAction="#handleCut"/>
+            <MenuItem text="Copy" fx:id="copyMI" accelerator="Shortcut+C"
+                      mnemonicParsing="false" onAction="#handleCopy"/>
+            <MenuItem text="Paste" fx:id="pasteMI" accelerator="Shortcut+V"
+                      mnemonicParsing="false" onAction="#handlePaste"/>
+            <MenuItem text="Select all" fx:id="selectAllMI" accelerator="Shortcut+A"
+                      mnemonicParsing="false" onAction="#handleSelectAll"/>
+            <MenuItem text="Find and Replace" fx:id="findReplaceMI"
+                      accelerator="Shortcut+F" mnemonicParsing="false"
+                      onAction="#handleFindReplace"/>
+        </Menu>
+
+        <!-- View Menu to control GUI apperence  -->
+        <Menu mnemonicParsing="false" text="View">
+            <MenuItem text="Dark Mode" fx:id="darkModeMI" accelerator="Shortcut+D"
+                      mnemonicParsing="false" onAction="#handleDarkMode"/>
+        </Menu>
+    </MenuBar>
+
+    <!-- use a ToolBar to hold the two buttons -->
+    <ToolBar layoutY="27.0" prefHeight="49.0" prefWidth="400.0"
+             >
+        <Button text="Transpile" fx:id="transpileButton" mnemonicParsing="false"
+                onAction="#handleTranspile"/>
+        <Button text="Transpile &amp; Run" fx:id="transpileRunButton"
+                mnemonicParsing="false" onAction="#handleTranspileRun"/>
+        <Button text="Stop" fx:id="stopButton" mnemonicParsing="false"
+                onAction="#handleStop"/>
+        <Button text="Check" fx:id="checkButton" mnemonicParsing="false"
+                onAction="#handleCheck"/>
+    </ToolBar>
+
+    <ToolBar fx:id="findReplaceBar" visible="false">
+        <TextField promptText="Text to find" fx:id="findTextField" />
+        <Button text="Find" fx:id="findButton"
+                mnemonicParsing="false" onAction="#handleFindButton"/>
+        <TextField promptText="Replace with" fx:id="replaceTextField" />
+        <Button text="Replace" fx:id="replaceButton"
+                mnemonicParsing="false" onAction="#handleReplace" />
+        <Button text="Replace All" fx:id="replaceAllButton"
+                mnemonicParsing="false" onAction="#handleReplaceAll" />
+        <Button text="Close" fx:id="closeButton"
+                mnemonicParsing="false" onAction="#handleFRClose" />
+    </ToolBar>
+
+
+    <!-- use a TabPane to hold the text area  -->
+    <TabPane fx:id="tabPane"
+             prefHeight="396.0" prefWidth="800.0" tabClosingPolicy="ALL_TABS"
+             VBox.vgrow="ALWAYS">
+    </TabPane>
+
+    <TitledPane fx:id="consolePane" text="Console" >
+    </TitledPane>
+
+</VBox>
+    </center>
+    <left>
+        <JFXDrawer fx:id="drawer" prefHeight="800" prefWidth="0" direction="LEFT"
+                   defaultDrawerSize="200"/>
+    </left>
+</BorderPane>
