@@ -1,14 +1,29 @@
-# Project Bantam, Version 1.10
+# 🐓 Project Bantam 
 
-A compiler for an object-oriented programming language Bantam, which is a subset of Java.
+Project Bantam is a compiler for Bantam-Java, a subset of Java 1.8. Project Bantam consists of two main components:
+      
+    1. A file editor / IDE that can be used to manage Bantam
+    programs (.btm suffix)
 
-This repository contains a Bantam-Java IDE, which will transpile Bantam java files into real Java files, which can be run by the Java JVM. Bantam files have the suffix .btm, and contain core features like for loops, while loops, but does not include static functions and other more complex aspects of Java.
+    2. A compiler that transpiles Bantam files into an
+    Abstract Syntax Tree, which can be translated into
+    Java code which can be compiled and run on the JVM.
+    
+# 📝 File Editor and IDE
 
-This project works as the "front-end" of a compiler, with a lexer, parser, and semantic analyzer. Learn more about compilers here: https://iq.opengenus.org/building-compiler-front-end/
+        Project Bantam contains a rudimentary file editor, capable of creating new files,
+    reading, writing, and saving. Like any good file editor, it contains good save-checking. 
 
-This project was developed for Colby's CS 361 class, taught by Professor Dale Skrien
 
-Contributors include Jasper Loverude, Dylan Tymkiw, and Cassidy Correll
+
+
+# ⚙️ Compiler 
+
+Project Bantam was created as a semester-long project for Dale Skriens CS 361
+course at Colby College.
+
+    This project works as the "front-end" of a compiler, with a lexer, parser, and semantic analyzer. 
+    Learn more about compilers here: https://iq.opengenus.org/building-compiler-front-end/
 
 
 
