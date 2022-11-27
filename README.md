@@ -12,7 +12,7 @@ Project Bantam is a compiler for Bantam-Java, a subset of Java 1.8. Project Bant
 # 📝 File Editor and IDE
 
         Project Bantam contains a rudimentary file editor, capable of creating new files,
-    reading, writing, and saving. Like any good file editor, it contains good save-checking. 
+    reading, writing, and saving. Like any good file editor, it contains good save-checking!
 
 
 
